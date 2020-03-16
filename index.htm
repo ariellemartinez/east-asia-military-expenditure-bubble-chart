@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Highcharts Example</title>
+<style type="text/css">
+#container {
+    height: 100%;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+</style>
+</head>
+<body>
+<script src="https://code.highcharts.com/highcharts.js"></script> 
+<script src="https://code.highcharts.com/highcharts-more.js"></script> 
+<script src="https://code.highcharts.com/modules/exporting.js"></script> 
+<script src="https://world101.cfr.org/themes/custom/world101_bootstrap/components/asset-map-chart/chart/vendors/highchart-cfr-theme.js"></script>
+<div id="container"></div>
+<script type="text/javascript">
+Highcharts.chart('container', {
+    chart: {
+        type: 'packedbubble'
+    },
+    title: {
+        text: 'Military Expenditure in East Asia and the Pacific',
+		style: {
+      	fontFamily: '"Larsseit", sans-serif',
+      	color: '#04284a',
+      	fontSize: '30px',
+      	opacity: 1
+    	}
+    },
+	credits: {
+    	href: 'https://www.sipri.org/databases/milex',
+    	text: 'Source: Stockholm International Peace Research Institute.',
+    	style: {
+      		display: 'block'
+    	}
+    },
+    tooltip: {
+        useHTML: true,
+        pointFormat: '<b>{point.name}:</b> ${point.value} billion'
+    },
+	legend: {
+		enabled: false
+	},
+    plotOptions: {
+        packedbubble: {
+            maxSize: '120%',
+            dataLabels: {
+                enabled: true,
+                format: '{point.name}'
+            }
+        }
+    },
+    colors: ['#4391DB', '#F25D27', '#5c6b40', '#aa2800', '#3f6d6b',
+    '#773863', '#b5a06d', '#A1A3A1', '#668296', '#f9b832'],
+    series: [
+		{
+        name: 'Military expenditure in 2018 (current US$)',
+        data: [ {
+            name: "United States",
+            value: 648.8
+        }]}, {
+        name: 'Military expenditure in 2018 (current US$)',
+        data: [{
+            name: 'China',
+            value: 250
+        }]}, {
+        name: 'Military expenditure in 2018 (current US$)',
+        data: [{
+            name: 'Japan',
+            value: 46.62
+        }]},
+        {
+        name: 'Military expenditure in 2018 (current US$)',
+        data: [{
+            name: "South Korea",
+            value: 43.07
+        }]},
+			 {
+        name: 'Military expenditure in 2018 (current US$)',
+        data: [{
+            name: "Australia",
+            value: 26.71
+        }]},
+       {
+        name: 'Military expenditure in 2018 (current US$)',
+        data: [{
+            name: "Singapore",
+            value: 10.84
+        }]},{
+        name: 'Military expenditure in 2018 (current US$)',
+        data: [ {
+            name: "Taiwan",
+            value: 10.71
+        }]},
+        {
+        name: 'Military expenditure in 2018 (current US$)',
+        data: [{
+            name: "Indonesia",
+            value: 7.44
+        }]}, 
+        {
+        name: 'Military expenditure in 2018 (current US$)',
+        data: [{
+            name: "Thailand",
+            value: 6.83
+        }]},
+        {
+        name: 'Military expenditure in 2018 (current US$)',
+        data: [{
+            name: "Vietnam",
+            value: 5.5
+        }]}]
+});
+</script>
+</body>
+</html>
